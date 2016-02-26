@@ -64,8 +64,7 @@ function getWinner(playerMove,computerMove) {
     if (playerMove == computerMove){
         winner = 'tie';
     }
-    console.log('you chose ' + playerMove);
-    console.log('computer chose ' + computerMove);
+    alert('you chose ' + playerMove + '\ncomputer chose ' + computerMove);
     return winner;
 }
 
@@ -79,17 +78,15 @@ function playToFive() {
         var win = getWinner(getPlayerMove(getInput()),getComputerMove(randomPlay()));
         if (win == 'player') { 
             playerWins += 1;
-            console.log('player wins');
+            alert('player wins\nPlayer:' + playerWins + '\nComputer:' + computerWins);
         }
         if (win == 'computer') { 
             computerWins += 1;
-            console.log('computer wins');
+            alert('computer wins\nPlayer:' + playerWins + '\nComputer:' + computerWins);
         }
         if (win == 'tie') {
-            console.log('tie game');
+            alert('tie game\nPlayer:' + playerWins + '\nComputer:' + computerWins);
         }
     }
     console.log([playerWins,computerWins]);
 }
-
-playToFive();
